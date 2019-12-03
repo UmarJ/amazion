@@ -1,4 +1,4 @@
-/*Create schema onlineStore;*/
+Create schema onlineStore;
 create table Account(
 AccountID varchar(10),
 Email varchar(50),
