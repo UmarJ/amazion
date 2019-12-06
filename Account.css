@@ -1,0 +1,27 @@
+body{
+    background-image: url("https://urstoryiq.com/wp-content/uploads/2018/07/Credit-Card-Advance.jpg");
+    padding-top:100px;
+}
+
+p{
+    font-family: 'Solway', serif;
+    
+}
+#greetings{
+    font-size: 20px;
+    
+}
+
+.leftpane{
+    background-color: rgba(240, 240, 240, 0.8)
+}
+
+.rightpane{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.righttext{
+    font-family: 'Roboto', sans-serif;
+
+    color:rgba(255, 255, 255,0.7);
+}
