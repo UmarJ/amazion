@@ -1,0 +1,39 @@
+#navsearch{
+    width: 15em;
+}
+
+body{
+    background-image: url("https://cdn.suwalls.com/wallpapers/abstract/grey-gradient-27559-1920x1080.jpg");
+    padding-top:50px;
+    padding-bottom:50px;
+    height: 1800px;
+}
+
+.homepagewidgets{
+    background-color: #7DF9FF;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}
+
+.buttonsize{
+    width: 100px;
+}
+
+#LoginModalLabel{
+    text-align: center;
+}
+
+h5{
+    background: #E8ECEF;
+}
+
+#hi{
+    width:640px;
+    size: 200px;
+}
+#hi1{
+    width: 760px;
+}
