@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body style="padding-top:100px; background-image: url(https://cdn.hipwallpaper.com/i/80/74/PBrzZ9.jpg);">
+    <nav class="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class=" ml-3 navbar-brand" href="#">Amazion</a>
+
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar navbar-dark bg-dark">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Computers And Accessories</a>
+                        <a class="dropdown-item" href="#">Clothing Line</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Cars</a>
+                    </div>
+                </li>
+                <li class="ml-5">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                            id="navsearch">
+                        <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <li>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#LoginModal"><i
+                            class="fa fa-user" aria-hidden="true"></i>
+                        Login <span class="sr-only">(current)</span> </button>
+
+                </li>
+                </li>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#SignupModal"><i
+                        class="fa fa-user-plus" aria-hidden="true"></i>
+                    Signup <span class="sr-only">(current)</span> </button>
+                <li>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"><i
+                            class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        Cart <span class="sr-only">(current)</span> </button>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 " style="background-color: rgba(130,130,130,1)">
+                <p class="text-center" style="font-weight:800; border-bottom:1px solid black">Post Your Ad</p>
+                <label class="mt-2" for="PhoneNo" style="font-weight:500;">Choose Category</label>
+                <form>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Clothes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Electronics
+                        </label>
+                    </div>
+
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Books
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Food
+                        </label>
+                    </div>
+
+                    <label class="mt-2" for="Phone" style="font-weight:500;">Choose Condition</label>
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios1"
+                            value="option2">
+                        <label class="form-check-label" for="secondRadios1">
+                            New
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="secondRadios" id="secondRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="secondRadios2">
+                            Used
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title" style="font-weight:500">Enter a title for your ad</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="desc" style="font-weight:500;">Enter a description for your ad</label>
+                        <textarea class="form-control" rows="3" required> </textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price" style="font-weight:500;">Price</label>
+                        <input type="number" class="form-control" id="price" required>
+                    </div>
+
+                    <label for="upload" style="font-weight: 500;">Upload a picture</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark mb-2">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

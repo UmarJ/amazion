@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Start Selling</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body
+    style="background-image:url(https://c.wallhere.com/photos/ea/4e/coins_money_Russian-129106.png!d); padding-top:100px;">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class=" ml-3 navbar-brand" href="#">Amazion</a>
+
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar navbar-dark bg-dark">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Computers And Accessories</a>
+                        <a class="dropdown-item" href="#">Clothing Line</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Cars</a>
+                    </div>
+                </li>
+                <li class="ml-5">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                            id="navsearch">
+                        <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <li>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#LoginModal"><i
+                            class="fa fa-user" aria-hidden="true"></i>
+                        Login <span class="sr-only">(current)</span> </button>
+
+                </li>
+                </li>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#SignupModal"><i
+                        class="fa fa-user-plus" aria-hidden="true"></i>
+                    Signup <span class="sr-only">(current)</span> </button>
+                <li>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"><i
+                            class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        Cart <span class="sr-only">(current)</span> </button>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 " style="background-color: rgba(210, 215, 211, 0.9);">
+                <label class="mt-2" for="Phone" style="font-weight:500;">Cell Phone</label>
+                <form>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">+92</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="(300-XXXXXXX)" aria-label="SellerPhone"
+                            aria-describedby="basic-addon1" required maxlength="10" minlength="10">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" style="font-weight:500;">E-Mail</label>
+                        <input type="email" class="form-control" placeholder="Enter valid Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" style="font-weight:500;">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopName" style="font-weight:500;">Shop Name</label>
+                        <input type="text" class="form-control" placeholder="Shop Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ShopName" style="font-weight:500;">Address</label>
+                        <input type="textarea rows = 3"  class="form-control" placeholder="Street Address" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark mb-2">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
