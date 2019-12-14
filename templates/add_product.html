@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<div>
+    <form id="product_form" method="post" action="{% url 'addproduct' %}">
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+        <table>{{ form.as_table }}</table>
+        <input type="file" name="picture"/>
+        <input type="submit" value="Add Product" />
+
+    </form>
+</div>
+
+{% endblock %}

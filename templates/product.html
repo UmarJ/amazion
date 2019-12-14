@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+    <table style="width:100%">
+        <tr>
+            <td>Product Name</td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{ description }}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{ price }}</td>
+        </tr>
+        <tr>
+            <td>Seller</td>
+            <td>{{ seller_name }}</td>
+        </tr>
+    </table>
+{% endblock %}
