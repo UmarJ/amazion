@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<br>
+<h4>{{ user.username }}'s Cart </h4>
+<hr>
+
+{% if items %}
+    {% for item in items %}
+        <a href="{% url 'product-detail' pk=item.id%}"">
+            <h4>{{ item.name }}</h4>
+        </a>
+        Added on: {{ item.dateAdded}} <br>
+        Price: {{ item.price }}
+        <form action="{% url 'remove-from-cart' product_id=item.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Remove from Cart" />
+        </form>
+    <hr>
+    {% endfor %}
+    <h4>Total Price: {{ total }}</h4>
+    <form action="{% url 'checkout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Proceed To Checkout" />
+    </form>
+{% else %}
+    <h5>No Items</h5>
+
+{% endif %}
+{% endblock %}

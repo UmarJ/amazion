@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Category(models.Model):
     name = models.CharField(max_length=20, unique=True)
-    parentCategory = models.ForeignKey(
+    parentCategory = models.ForeignKey( 
         'self', blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -27,23 +28,19 @@ class Account(models.Model):
     creationDate = models.DateTimeField(auto_now_add=True)
     phone = models.IntegerField(blank=True)
     balance = models.FloatField(default=1000)
+    seller = models.BooleanField(default=False)
+    @property
+    def rating(self):
+        pass
 
     def __str__(self):
         return self.user.username
 
 
-class TransactionHistory(models.Model):
+class Transaction(models.Model):
     accountID = models.ForeignKey(Account, on_delete=models.CASCADE)
     changeAmount = models.FloatField()
     date = models.DateTimeField(auto_now_add=True)
-
-
-class Seller(Account):
-    rating = models.IntegerField(default=5)
-
-
-class Customer(Account):
-    pass
 
 
 class Product(models.Model):
@@ -53,7 +50,7 @@ class Product(models.Model):
         Category, on_delete=models.CASCADE)
     price = models.FloatField()
     quantity = models.IntegerField(blank=True, default=0)
-    sellerID = models.ForeignKey(Seller, on_delete=models.CASCADE)
+    sellerID = models.ForeignKey(Account, on_delete=models.CASCADE)
     dateAdded = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -62,11 +59,13 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     productID = models.ForeignKey(Product, on_delete=models.CASCADE)
-    picture = models.ImageField(upload_to='product_images/')
+    url = models.ImageField(upload_to='product_images/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
 
 class Cart(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Account, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     dateAdded = models.DateTimeField(auto_now_add=True)
 
 
@@ -77,7 +76,10 @@ class Deal(models.Model):
 
 class Review(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    stars = models.IntegerField
+    stars = models.IntegerField(
+        default=5,
+        validators=[MinValueValidator(0), MaxValueValidator(5)]
+    )
     text = models.TextField(max_length=250)
     reviewer = models.ForeignKey(Account, on_delete=models.CASCADE)
     wasBought = models.BooleanField()
@@ -99,7 +101,7 @@ class Address(models.Model):
     street = models.TextField(max_length=30)
     city = models.TextField(max_length=30)
     country = models.TextField(max_length=30)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Account, on_delete=models.CASCADE)
 
 
 class Question(models.Model):

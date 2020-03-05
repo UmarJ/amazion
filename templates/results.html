@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<br>
+<h4>Search Results for {{ query }} </h4>
+<hr>
+
+{% if items %}
+    {% for item in items %}
+        <a href="{% url 'product-detail' pk=item.id%}"">
+            <h4>{{ item.name }}</h4>
+        </a>
+        Added on: {{ item.dateAdded}} <br>
+        Price: {{ item.price }}
+    <hr>
+    {% endfor %}
+    <h4>Total Price: {{ total }}</h4>
+    <form action="{% url 'checkout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Proceed To Checkout" />
+    </form>
+{% else %}
+    <h5>No Items</h5>
+
+{% endif %}
+{% endblock %}

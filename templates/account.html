@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+    Account Details
+{% endblock title_block %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3 leftpane">
+            <div class="list-group">
+                <p class="text-center mt-2">Hello {{ request.user.username }}!</p>
+                <p class="mt-2">Account Settings:</p>
+                <a type="button" href="#" class="list-group-item list-group-item-dark badge badge-dark mb-2">My
+                    Profile</a>
+                <a type="button" href="#"
+                    class="list-group-item list-group-item-dark badge badge-dark mb-3">Addresses</a>
+                <p>My Orders:</p>
+                <a type="button" href="{% url 'transaction-history' %}"
+                    class="list-group-item list-group-item-dark badge badge-dark mb-2">Previous Orders</a>
+                <a type="button" href="#"
+                    class="list-group-item list-group-item-dark badge badge-dark mb-3">Cancellations</a>
+                <p>Other Options:</p>
+                <a type="button" href="#" class="list-group-item list-group-item-dark badge badge-dark mb-2">My
+                    reviews</a>
+                <a type="button" href="#" class="list-group-item list-group-item-dark badge badge-dark mb-3">Start
+                    Selling</a>
+            </div>
+        </div>
+
+        <div class="col-9 rightpane">
+            <div class="row">
+                <p class="righttext pl-3">Personal Information:</p>
+            </div>
+            <div class="row">
+                <p class="righttext pl-3">((Take name from database and add here))</p>
+            </div>
+            <div class="row">
+                <p class="righttext pl-3 mt-2">{{ request.user.email }}</p>
+            </div>
+            <div class="row pt-5">
+                <p class="righttext pl-3">Address Book:</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p class=" righttext">Shipping Address:</p>
+                </div>
+                <div class="col-3"></div>
+                <p class="righttext">Billing Address:</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p class="righttext">((Add Shipping address from database here))</p>
+                </div>
+                <div class="col-3"></div>
+                    <p class="righttext ">((Add Billing address from database here))</p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body_block %}

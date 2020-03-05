@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+    <img src={{MEDIA_URL}}{{ image.url }} height=100 width=100></img>
+    <table style="width:100%">
+        <tr>
+            <td>Product Name</td>
+            <td>{{ object.name }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{ object.description }}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{ object.price }}</td>
+        </tr>
+        <tr>
+            <td>Seller</td>
+            <td>{{ object.sellerID }}</td>
+        </tr>
+    </table>
+    <form action="{% url 'add-to-cart' product_id=object.id%}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="add-to-cart" value="Add to Cart" />
+    </form>
+    <a href="{% url 'review' product_id=object.id%}">
+        <button>Reviews</button>
+    </a>
+{% endblock body_block %}

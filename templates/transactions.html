@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+{% if transactions %}
+    {% for transaction in transactions %}
+        Change: {{ transaction.changeAmount }} <br>
+        Time: {{ transaction.date }} <hr>
+    {% endfor %}
+{% else %}
+    <h5>No Transactions</h5>
+
+{% endif %}
+
+{% endblock body_block %}

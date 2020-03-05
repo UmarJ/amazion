@@ -1,11 +1,9 @@
 from django.contrib import admin
-from main.models import Product, Account, TransactionHistory, Seller, Customer, ProductImage, Cart, Deal, Category, Review, ReviewImages, Address, Question, Answer, AnswerRating
+from main.models import Product, Account, Transaction, ProductImage, Cart, Deal, Category, Review, ReviewImages, Address, Question, Answer, AnswerRating
 
 admin.site.register(Product)
+admin.site.register(Transaction)
 admin.site.register(Account)
-admin.site.register(TransactionHistory)
-admin.site.register(Seller)
-admin.site.register(Customer)
 admin.site.register(Cart)
 admin.site.register(Deal)
 admin.site.register(Category)

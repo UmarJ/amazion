@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}
+    Reviews
+{% endblock title_block %}
+
+{% block head_block %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/review.css" %}" />
+{% endblock head_block %}
+
+{% block body_block %}
+    <h2>Reviews for {{ product.name }}</h2> 
+<hr>
+
+{% for review in reviews %}
+    <h4>{{ review.reviewer }} rated this 
+        {% for i in range %}
+            {% if i < review.stars%}
+                <span class="fa fa-star checked"></span>
+            {% else %}
+                <span class="fa fa-star"></span>
+            {% endif %}
+        {% endfor %}
+    </h4>
+{{ review.text }}
+<hr>
+{% endfor %}
+
+<script type="text/javascript">
+    function ShowReviewBox() {
+        var reviewBox = document.getElementById("addReviewDiv");
+        reviewBox.style.display = "block";
+    }
+</script>
+
+<input type="button" value="Add a Review" onclick="ShowReviewBox()" />
+<div id="addReviewDiv" style="display: none">
+    <br>
+    <form action="{% url 'review' product_id=product.id%}" method=post>
+        {% csrf_token %}
+        <textarea id="reviewText" name="text" rows="5" cols="50"></textarea>
+        <br>
+        <input type="radio" name="stars" value="1"> 1
+        <input type="radio" name="stars" value="2"> 2
+        <input type="radio" name="stars" value="3"> 3
+        <input type="radio" name="stars" value="4"> 4
+        <input type="radio" name="stars" value="5"> 5
+        <br>
+        <input type="submit" value="Post" />
+    </form>
+</div>
+
+{% endblock body_block %}

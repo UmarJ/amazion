@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'main.context_processors.add_user_form',
                 'main.context_processors.add_account_form',
+                'main.context_processors.add_balance',
             ],
         },
     },
@@ -131,3 +132,4 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+LOGIN_URL = 'index'
